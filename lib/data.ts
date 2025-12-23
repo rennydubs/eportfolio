@@ -2,9 +2,9 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
-import corpcommentImg from "@/public/corpcomment.png";
-import rmtdevImg from "@/public/rmtdev.png";
-import wordanalyticsImg from "@/public/wordanalytics.png";
+import project1Img from "@/public/project1.png";
+import project2Img from "@/public/project2.png";
+import project3Img from "@/public/project3.png";
 
 export const links = [
   { name: "Home", hash: "#home" },
@@ -44,19 +44,22 @@ export const projectsData = [
     title: "Emotion-to-Video AI",
     description: "Capstone Project. An end-to-end system using DistilBERT to detect emotional tone in text and generate corresponding video output.",
     tags: ["Python", "DistilBERT", "NLP", "React", "AWS"],
-    imageUrl: corpcommentImg,
+    imageUrl: project2Img,
+    websiteUrl: "https://github.com/rennydubs/auslan-nlp-sign-retrieval",
   },
   {
     title: "Juris Techne",
-    description: "Contributed to a legal AI platform. Built PHP modules for content management and interactive Chart.js dashboards.",
-    tags: ["PHP", "JavaScript", "Chart.js", "MySQL"],
-    imageUrl: rmtdevImg,
+    description: "Contributed to a legal AI platform landing page using WordPress. Built PHP modules for content management and interactive Chart.js dashboards.",
+    tags: ["PHP", "JavaScript", "Chart.js", "MySQL", "WordPress"],
+    imageUrl: project1Img,
+    websiteUrl: "https://juristechne.com",
   },
   {
-    title: "Fit-Track AI",
+    title: "Carbcasters",
     description: "Gamified fitness web app. Built React frontend and Node.js backend to combine fitness tracking with AI meal planning.",
     tags: ["React", "Node.js", "PostgreSQL", "Tailwind"],
-    imageUrl: wordanalyticsImg,
+    imageUrl: project3Img,
+    websiteUrl: "https://github.com/rennydubs/carbcasters",
   },
 ] as const;
 
