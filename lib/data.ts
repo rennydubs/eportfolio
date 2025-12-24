@@ -2,6 +2,32 @@ import React from "react";
 import { CgWorkAlt } from "react-icons/cg";
 import { FaReact } from "react-icons/fa";
 import { LuGraduationCap } from "react-icons/lu";
+import {
+  SiPython,
+  SiTypescript,
+  SiJavascript,
+  SiCplusplus,
+  SiHtml5,
+  SiReact,
+  SiNextdotjs,
+  SiTailwindcss,
+  SiFramer,
+  SiChartdotjs,
+  SiFastapi,
+  SiNodedotjs,
+  SiExpress,
+  SiFlask,
+  SiPostgresql,
+  SiSupabase,
+  SiAmazonaws,
+  SiDocker,
+  SiFirebase,
+  SiGit,
+  SiOpenai,
+} from "react-icons/si";
+import { FaRobot, FaBrain, FaProjectDiagram, FaDatabase, FaKey } from "react-icons/fa";
+import { MdArchitecture, MdOutlineIntegrationInstructions } from "react-icons/md";
+import { VscSymbolMisc } from "react-icons/vsc";
 import project1Img from "@/public/project1.png";
 import project2Img from "@/public/project2.png";
 import project3Img from "@/public/project3.png";
@@ -48,9 +74,9 @@ export const projectsData = [
     websiteUrl: "https://github.com/rennydubs/auslan-nlp-sign-retrieval",
   },
   {
-    title: "Juris Techne",
-    description: "Contributed to a legal AI platform landing page using WordPress. Built PHP modules for content management and interactive Chart.js dashboards.",
-    tags: ["PHP", "JavaScript", "Chart.js", "MySQL", "WordPress"],
+    title: "JurisTechne",
+    description: "Designed and developed a content-heavy legal AI platform using WordPress. Engineered custom PHP modules for dynamic content management and integrated Chart.js for interactive data visualization.",
+    tags: ["WordPress", "PHP", "JavaScript", "Chart.js"],
     imageUrl: project1Img,
     websiteUrl: "https://juristechne.com",
   },
@@ -66,26 +92,65 @@ export const projectsData = [
 export const skillsData = [
   {
     category: "Languages",
-    skills: ["Python", "TypeScript", "JavaScript (ES6+)", "SQL", "C++", "HTML/CSS"],
+    skills: [
+      { name: "Python", icon: React.createElement(SiPython) },
+      { name: "TypeScript", icon: React.createElement(SiTypescript) },
+      { name: "JavaScript (ES6+)", icon: React.createElement(SiJavascript) },
+      { name: "SQL", icon: React.createElement(SiPostgresql) },
+      { name: "C++", icon: React.createElement(SiCplusplus) },
+      { name: "HTML/CSS", icon: React.createElement(SiHtml5) },
+    ],
   },
   {
     category: "Frontend Ecosystem",
-    skills: ["React", "Next.js", "Tailwind CSS", "Shadcn/UI", "Framer Motion", "Chart.js"],
+    skills: [
+      { name: "React", icon: React.createElement(SiReact) },
+      { name: "Next.js", icon: React.createElement(SiNextdotjs) },
+      { name: "Tailwind CSS", icon: React.createElement(SiTailwindcss) },
+      { name: "Shadcn/UI", icon: React.createElement(VscSymbolMisc) },
+      { name: "Framer Motion", icon: React.createElement(SiFramer) },
+      { name: "Chart.js", icon: React.createElement(SiChartdotjs) },
+    ],
   },
   {
     category: "Backend & API",
-    skills: ["FastAPI", "Node.js", "Express", "Flask", "Clerk Auth"],
+    skills: [
+      { name: "FastAPI", icon: React.createElement(SiFastapi) },
+      { name: "Node.js", icon: React.createElement(SiNodedotjs) },
+      { name: "Express", icon: React.createElement(SiExpress) },
+      { name: "Flask", icon: React.createElement(SiFlask) },
+      { name: "Clerk Auth", icon: React.createElement(FaKey) },
+    ],
   },
   {
     category: "Database & Cloud",
-    skills: ["PostgreSQL", "Supabase", "AWS (EC2/S3)", "Docker", "Firebase", "Git/GitHub"],
+    skills: [
+      { name: "PostgreSQL", icon: React.createElement(SiPostgresql) },
+      { name: "Supabase", icon: React.createElement(SiSupabase) },
+      { name: "AWS (EC2/S3)", icon: React.createElement(SiAmazonaws) },
+      { name: "Docker", icon: React.createElement(SiDocker) },
+      { name: "Firebase", icon: React.createElement(SiFirebase) },
+      { name: "Git/GitHub", icon: React.createElement(SiGit) },
+    ],
   },
   {
     category: "AI & Machine Learning",
-    skills: ["OpenAI API", "Whisper", "RAG Pipelines", "Vector Embeddings", "LLM Integration"],
+    skills: [
+      { name: "OpenAI API", icon: React.createElement(SiOpenai) },
+      { name: "Whisper", icon: React.createElement(FaRobot) },
+      { name: "RAG Pipelines", icon: React.createElement(FaDatabase) },
+      { name: "Vector Embeddings", icon: React.createElement(FaBrain) },
+      { name: "LLM Integration", icon: React.createElement(MdOutlineIntegrationInstructions) },
+    ],
   },
   {
     category: "Professional Competencies",
-    skills: ["Agile/Scrum", "API Design", "System Architecture", "CI/CD", "Data Visualisation"],
+    skills: [
+      { name: "Agile/Scrum", icon: React.createElement(FaProjectDiagram) },
+      { name: "API Design", icon: React.createElement(MdOutlineIntegrationInstructions) },
+      { name: "System Architecture", icon: React.createElement(MdArchitecture) },
+      { name: "CI/CD", icon: React.createElement(SiGit) },
+      { name: "Data Visualisation", icon: React.createElement(SiChartdotjs) },
+    ],
   },
-] as const;
+];

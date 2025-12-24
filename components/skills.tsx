@@ -5,6 +5,7 @@ import SectionHeading from "./section-heading";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
+import { FadeIn } from "@/components/ui/fade-in";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -29,36 +30,43 @@ export default function Skills() {
       ref={ref}
       className="mb-28 max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
-      <SectionHeading>My skills</SectionHeading>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
-        {skillsData.map((section, index) => (
-          <motion.div
-            key={index}
-            variants={fadeInAnimationVariants}
-            initial="initial"
-            whileInView="animate"
-            viewport={{
-              once: true,
-            }}
-            custom={index}
-            className="space-y-3"
-          >
-            <h3 className="text-lg font-bold text-gray-800 dark:text-gray-200 pl-1">
-              {section.category}
-            </h3>
-            <ul className="flex flex-wrap gap-2 text-lg text-gray-800">
-              {section.skills.map((skill, skillIndex) => (
-                <li
-                  className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80 text-sm md:text-base"
-                  key={skillIndex}
-                >
-                  {skill}
-                </li>
-              ))}
-            </ul>
-          </motion.div>
-        ))}
-      </div>
+      <FadeIn>
+        <SectionHeading>My skills</SectionHeading>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-left">
+          {skillsData.map((section, index) => (
+            <motion.div
+              key={index}
+              variants={fadeInAnimationVariants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{
+                once: true,
+              }}
+              custom={index}
+              className="space-y-3"
+            >
+              <h3 className="text-lg font-bold text-gray-800 dark:text-gray-200 pl-1">
+                {section.category}
+              </h3>
+              <ul className="flex flex-wrap gap-2 text-lg text-gray-800">
+                {section.skills.map((skill, skillIndex) => (
+                  <li
+                    className="group flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-xl px-4 py-2.5 dark:text-white/80 text-sm md:text-base transition-all duration-300 hover:bg-white/20 hover:border-white/30"
+                    key={skillIndex}
+                  >
+                    <span className="text-xl text-white/60 transition-colors duration-300 group-hover:text-white">
+                      {skill.icon}
+                    </span>
+                    <span className="transition-colors duration-300 group-hover:text-white">
+                      {skill.name}
+                    </span>
+                  </li>
+                ))}
+              </ul>
+            </motion.div>
+          ))}
+        </div>
+      </FadeIn>
     </section>
   );
 }

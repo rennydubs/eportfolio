@@ -44,7 +44,7 @@ export default function Intro() {
       </div>
 
       <motion.h1
-        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl text-white"
+        className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl text-white font-space"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
@@ -56,7 +56,7 @@ export default function Intro() {
       </motion.h1>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium"
+        className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 text-lg font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -65,23 +65,25 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
+          className="group relative px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-100 transition-all duration-300 overflow-hidden bg-slate-950 text-white border border-slate-800 hover:border-indigo-500/50 hover:shadow-[0_0_20px_-5px_rgba(99,102,241,0.5)]"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
           }}
         >
-          Contact me here{" "}
-          <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
+          <span className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500/20 to-transparent bg-[length:200%_100%] animate-shimmer" />
+          <span className="relative z-10">Contact me here</span>
+          <BsArrowRight className="relative z-10 opacity-70 group-hover:translate-x-1 transition" />
         </Link>
 
         <a
-          className="group bg-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10"
+          className="group relative px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-100 transition-all duration-300 overflow-hidden bg-slate-950 text-white border border-slate-800 hover:border-purple-500/50 hover:shadow-[0_0_20px_-5px_rgba(168,85,247,0.5)]"
           href="/CV.pdf"
           download
         >
-          Download my Resume{" "}
-          <HiDownload className="opacity-60 group-hover:translate-y-1 transition" />
+          <span className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/20 to-transparent bg-[length:200%_100%] animate-shimmer" />
+          <span className="relative z-10">Download my Resume</span>
+          <HiDownload className="relative z-10 opacity-60 group-hover:translate-y-1 transition" />
         </a>
 
         <a
