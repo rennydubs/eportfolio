@@ -9,6 +9,7 @@ import { Toaster } from "react-hot-toast";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { Metadata } from "next";
 import SmoothScroll from "@/components/smooth-scroll";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Inter({ subsets: ["latin"] });
 const spaceGrotesk = Space_Grotesk({
@@ -65,10 +66,10 @@ export default function RootLayout({
               {children}
               <Footer />
             </AuroraBackground>
-
             <Toaster position="top-right" />
             <ThemeSwitch />
           </ActiveSectionContextProvider>
+          <Analytics />
         </ThemeContextProvider>
       </body>
     </html>
