@@ -2,14 +2,58 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  body {
+    @apply bg-zinc-950 text-gray-50;
+    margin: 0;
+    padding: 0;
+  }
+}
+
 html {
   --line-color: #e5e7eb;
+  --indigo-500: #6366f1;
+  --indigo-400: #818cf8;
+  --purple-300: #d8b4fe;
+  --blue-300: #93c5fd;
+  --violet-200: #ddd6fe;
 }
 
 html.dark {
   --line-color: rgba(255, 255, 255, 0.2);
 }
 
+/* Dark mode text defaults */
+.dark body {
+  color: #e2e8f0;
+}
+
+.dark h1,
+.dark h2,
+.dark h3,
+.dark h4,
+.dark h5,
+.dark h6 {
+  color: #ffffff;
+}
+
 .borderBlack {
   @apply border border-black/10;
+}
+
+/* Noise texture overlay - DISABLED for performance
+.bg-noise {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.015'/%3E%3C/svg%3E");
+}
+*/
+
+/* Force timeline text to be white */
+.vertical-timeline-element-title,
+.vertical-timeline-element-subtitle,
+.vertical-timeline-element-description {
+  color: #fff !important;
+}
+
+.vertical-timeline-element-date {
+  color: rgba(255, 255, 255, 0.7) !important;
 }

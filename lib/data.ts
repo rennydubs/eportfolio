@@ -43,7 +43,7 @@ export const projectsData = [
   {
     title: "Emotion-to-Video AI",
     description: "Capstone Project. An end-to-end system using DistilBERT to detect emotional tone in text and generate corresponding video output.",
-    tags: ["Python", "DistilBERT", "NLP", "React", "AWS"],
+    tags: ["Python", "DistilBERT", "NLP", "Flask"],
     imageUrl: project2Img,
     websiteUrl: "https://github.com/rennydubs/auslan-nlp-sign-retrieval",
   },

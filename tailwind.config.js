@@ -12,6 +12,31 @@ module.exports = {
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      colors: {
+        indigo: {
+          500: "#6366f1",
+          400: "#818cf8",
+        },
+        purple: {
+          300: "#d8b4fe",
+        },
+        blue: {
+          300: "#93c5fd",
+        },
+        violet: {
+          200: "#ddd6fe",
+        },
+      },
+      animation: {
+        aurora: "aurora 15s ease infinite",
+      },
+      keyframes: {
+        aurora: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
+        },
+      },
     },
   },
   plugins: [],
