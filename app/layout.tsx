@@ -19,11 +19,11 @@ const spaceGrotesk = Space_Grotesk({
 export const metadata: Metadata = {
   title: "Oliver Dubois | Software Engineer",
   description: "Software Engineering student at UTS, building AI-driven platforms and production-ready applications.",
-  metadataBase: new URL("https://oliverdubois.dev"),
+  metadataBase: new URL("https://oliverdubois.vercel.app"),
   openGraph: {
     title: "Oliver Dubois | Software Engineer",
     description: "Software Engineering student at UTS, building AI-driven platforms and production-ready applications.",
-    url: "https://oliverdubois.dev",
+    url: "https://oliverdubois.vercel.app",
     siteName: "Oliver Dubois Portfolio",
     images: [
       {
@@ -43,7 +43,7 @@ export const metadata: Metadata = {
     images: ["/opengraph-image.png"],
   },
   icons: {
-    icon: "/favicon.ico",
+    icon: "/icon.png",
   },
 };
 
