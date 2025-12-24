@@ -3,8 +3,8 @@ import "./globals.css";
 import { Inter, Space_Grotesk } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
-import ThemeSwitch from "@/components/theme-switch";
-import ThemeContextProvider from "@/context/theme-context";
+//import ThemeSwitch from "@/components/theme-switch";
+//import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import { AuroraBackground } from "@/components/ui/aurora-background";
 import { Metadata } from "next";
@@ -58,19 +58,16 @@ export default function RootLayout({
       <body
         className={`${inter.className} ${spaceGrotesk.variable} bg-transparent text-gray-950 relative pt-28 sm:pt-36 dark:text-gray-50 dark:text-opacity-90`}
       >
-        <ThemeContextProvider>
-          <SmoothScroll />
-          <ActiveSectionContextProvider>
-            <AuroraBackground>
-              <Header />
-              {children}
-              <Footer />
-            </AuroraBackground>
-            <Toaster position="top-right" />
-            <ThemeSwitch />
-          </ActiveSectionContextProvider>
-          <Analytics />
-        </ThemeContextProvider>
+        <SmoothScroll />
+        <ActiveSectionContextProvider>
+          <AuroraBackground>
+            <Header />
+            {children}
+            <Footer />
+          </AuroraBackground>
+          <Toaster position="top-right" />
+        </ActiveSectionContextProvider>
+        <Analytics />
       </body>
     </html>
   );
