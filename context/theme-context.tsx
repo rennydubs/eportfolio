@@ -1,6 +1,6 @@
 "use client";
 
-import React, { createContext, useContext } from "react";
+import React, { useEffect, useState, createContext, useContext } from "react";
 
 type Theme = "light" | "dark";
 
@@ -16,21 +16,46 @@ export default function ThemeContextProvider({
 }: {
   children: React.ReactNode;
 }) {
+  const [theme, setTheme] = useState<Theme>("dark");
+
+  const toggleTheme = () => {
+    if (theme === "light") {
+      setTheme("dark");
+      window.localStorage.setItem("theme", "dark");
+      document.documentElement.classList.add("dark");
+    } else {
+      setTheme("light");
+      window.localStorage.setItem("theme", "light");
+      document.documentElement.classList.remove("dark");
+    }
+  };
+
+  useEffect(() => {
+    const localTheme = window.localStorage.getItem("theme") as Theme | null;
+
+    if (localTheme) {
+      setTheme(localTheme);
+      if (localTheme === "dark") {
+        document.documentElement.classList.add("dark");
+      }
+    } else if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme("dark");
+      document.documentElement.classList.add("dark");
+    }
+  }, []);
+
   return (
-    <ThemeContext.Provider
-      value={{
-        theme: "dark", // <--- Hardcoded to Dark
-        toggleTheme: () => { }, // <--- Does nothing
-      }}
-    >
+    <ThemeContext.Provider value={{ theme, toggleTheme }}>
       {children}
     </ThemeContext.Provider>
   );
 }
 
+// This is the specific function that was "missing" in your error logs
 export function useTheme() {
-  return {
-    theme: "dark",
-    toggleTheme: () => { },
-  };
+  const context = useContext(ThemeContext);
+  if (context === null) {
+    throw new Error("useTheme must be used within a ThemeContextProvider");
+  }
+  return context;
 }

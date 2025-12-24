@@ -3,7 +3,7 @@ import "./globals.css";
 import { Inter, Space_Grotesk } from "next/font/google";
 import ActiveSectionContextProvider from "@/context/active-section-context";
 import Footer from "@/components/footer";
-//import ThemeSwitch from "@/components/theme-switch";
+import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
 import { AuroraBackground } from "@/components/ui/aurora-background";
@@ -67,6 +67,7 @@ export default function RootLayout({
               <Footer />
             </AuroraBackground>
             <Toaster position="top-right" />
+            <ThemeSwitch />
           </ActiveSectionContextProvider>
           <Analytics />
         </ThemeContextProvider>
