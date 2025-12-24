@@ -59,7 +59,7 @@ export const experiencesData = [
   {
     title: "Operations & Safety Coordinator",
     location: "Bunnings Warehouse",
-    description: "Managed safety and compliance operations for a high-volume store (100+ team members). Developed strong stakeholder management skills and led process optimization initiatives to reduce risk.",
+    description: "Managed safety and compliance operations for a high-volume store (100+ team members). Developed strong stakeholder management skills and led process optimisation initiatives to reduce risk.",
     icon: React.createElement(CgWorkAlt),
     date: "May 2022 - Present",
   },
@@ -75,7 +75,7 @@ export const projectsData = [
   },
   {
     title: "JurisTechne",
-    description: "Designed and developed a content-heavy legal AI platform using WordPress. Engineered custom PHP modules for dynamic content management and integrated Chart.js for interactive data visualization.",
+    description: "Designed and developed a content-heavy legal AI platform using WordPress. Engineered custom PHP modules for dynamic content management and integrated Chart.js for interactive data visualisation.",
     tags: ["WordPress", "PHP", "JavaScript", "Chart.js"],
     imageUrl: project1Img,
     websiteUrl: "https://juristechne.com",
