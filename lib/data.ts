@@ -35,57 +35,87 @@ import project3Img from "@/public/project3.png";
 export const links = [
   { name: "Home", hash: "#home" },
   { name: "About", hash: "#about" },
+  { name: "Experience", hash: "#experience" },
   { name: "Projects", hash: "#projects" },
   { name: "Skills", hash: "#skills" },
-  { name: "Experience", hash: "#experience" },
   { name: "Contact", hash: "#contact" },
 ] as const;
 
 export const experiencesData = [
   {
     title: "Software Engineer",
-    location: "Optik Consultancy",
-    description: "Leading a cross-functional team of 4 to architect and ship 'InnerSystems', an AI-powered team cohesion platform. Engineered the full-stack MVP using Next.js, Supabase, and FastAPI, implementing real-time AI analytics and an AI coach to provide personalised feedback and insights.",
+    company: "Optik Consultancy",
+    location: "Sydney, AU",
+    start: "Nov 2024",
+    end: "Present",
+    isCurrent: true,
+    highlights: [
+      "Led a cross-functional team of 4 to deliver 'InnerSystems', an AI-driven team cohesion and feedback platform.",
+      "Built and shipped a full-stack MVP using Next.js, Supabase, and FastAPI, including real-time analytics and automated coaching flows.",
+      "Designed API and database schema for sensitive team health data, focusing on secure access patterns and maintainable scaling.",
+    ],
+    tech: ["Next.js", "Supabase", "FastAPI", "Python"],
     icon: React.createElement(FaReact),
-    date: "Nov 2024 - Present",
-  },
-  {
-    title: "Software Engineering (Honours)",
-    location: "UTS, Sydney",
-    description: "Honours student specialising in Enterprise Software and AI. Awarded High Distinction (93) for Capstone Project 'NLP in Auslan'. Consistently achieved distinction-grade results across core subjects.",
-    icon: React.createElement(LuGraduationCap),
-    date: "Feb 2021 - Feb 2026",
   },
   {
     title: "Operations & Safety Coordinator",
-    location: "Bunnings Warehouse",
-    description: "Managed safety and compliance operations for a high-volume store (100+ team members). Developed strong stakeholder management skills and led process optimisation initiatives to reduce risk.",
+    company: "Bunnings Warehouse",
+    location: "Sydney, AU",
+    start: "May 2022",
+    end: "Present",
+    isCurrent: true,
+    highlights: [
+      "Managed safety and compliance operations for a high-volume site of 100+ staff with zero major incidents during tenure.",
+      "Led process improvements that improved audit readiness and reduced operational risk through standardised workflows.",
+      "Coordinated stakeholders across floor teams and leadership to drive consistent safety behaviours and reporting.",
+    ],
+    tech: ["Safety", "Compliance", "Audits", "Process Improvement", "Stakeholder Management"],
     icon: React.createElement(CgWorkAlt),
-    date: "May 2022 - Present",
   },
 ] as const;
 
 export const projectsData = [
   {
     title: "Emotion-to-Video AI",
-    description: "Capstone Project. An end-to-end system using DistilBERT to detect emotional tone in text and generate corresponding video output.",
-    tags: ["Python", "DistilBERT", "NLP", "Flask"],
+    hook: "Built an NLP pipeline that maps emotion in text to video outputs using DistilBERT.",
+    bullets: [
+      { label: "Problem", text: "Convert emotional tone into visual output for accessibility." },
+      { label: "Solution", text: "DistilBERT classifier + Flask API + video generation pipeline." },
+      { label: "Result", text: "End-to-end capstone system with reproducible evaluation and demo." },
+    ],
+    proofLinks: {
+      github: "https://github.com/rennydubs/auslan-nlp-sign-retrieval",
+    },
+    tech: ["Python", "DistilBERT", "NLP", "Flask"],
     imageUrl: project2Img,
-    websiteUrl: "https://github.com/rennydubs/auslan-nlp-sign-retrieval",
   },
   {
     title: "JurisTechne",
-    description: "Designed and developed a content-heavy legal AI platform using WordPress. Engineered custom PHP modules for dynamic content management and integrated Chart.js for interactive data visualisation.",
-    tags: ["WordPress", "PHP", "JavaScript", "Chart.js"],
+    hook: "End-to-end UI and design system for an AI legal research startup.",
+    bullets: [
+      { label: "Problem", text: "Dense legal content and AI outputs were hard to scan and inconsistent." },
+      { label: "Solution", text: "Built a scalable design system and high-fidelity prototypes with clear data-visualisation layouts." },
+      { label: "Result", text: "Delivered a cohesive product UI that improved readability and accelerated iteration." },
+    ],
+    proofLinks: {
+      live: "https://juristechne.com",
+    },
+    tech: ["WordPress", "PHP", "JavaScript", "Chart.js"],
     imageUrl: project1Img,
-    websiteUrl: "https://juristechne.com",
   },
   {
     title: "Carbcasters",
-    description: "Gamified fitness web app. Built React frontend and Node.js backend to combine fitness tracking with AI meal planning.",
-    tags: ["React", "Node.js", "PostgreSQL", "Tailwind"],
+    hook: "Gamified fitness tracker with meal planning and RPG-style progress.",
+    bullets: [
+      { label: "Problem", text: "Make fitness adherence engaging and measurable." },
+      { label: "Solution", text: "React UI + Node backend + PostgreSQL with gamification mechanics." },
+      { label: "Result", text: "Working prototype with core tracking and gamification loop." },
+    ],
+    proofLinks: {
+      github: "https://github.com/rennydubs/carbcasters",
+    },
+    tech: ["React", "Node.js", "PostgreSQL", "Tailwind"],
     imageUrl: project3Img,
-    websiteUrl: "https://github.com/rennydubs/carbcasters",
   },
 ] as const;
 

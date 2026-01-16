@@ -38,7 +38,7 @@ export default function AboutGrid() {
                             <h2 className="text-2xl font-bold mb-4 text-white">
                                 About Me
                             </h2>
-                            <p className="text-slate-200 leading-relaxed mb-3">
+                            <p className="text-slate-100 leading-relaxed mb-3">
                                 I am currently completing my{" "}
                                 <span className="font-semibold text-white">
                                     Bachelor of Engineering (Honours)
@@ -46,7 +46,7 @@ export default function AboutGrid() {
                                 in Software Engineering at UTS. My passion lies in bridging the gap
                                 between complex AI models and user-friendly applications.
                             </p>
-                            <p className="text-slate-200 leading-relaxed">
+                            <p className="text-slate-100 leading-relaxed">
                                 I recently led a team to build{" "}
                                 <span className="font-semibold text-white">
                                     InnerSystems
@@ -97,8 +97,11 @@ export default function AboutGrid() {
                                     UTS Software Engineering (Honours)
                                 </h3>
                             </div>
-                            <p className="text-sm text-slate-400 mb-4">
+                            <p className="text-sm text-slate-100 font-medium mb-2">
                                 Expected Graduation: Feb 2026
+                            </p>
+                            <p className="text-sm text-slate-100 leading-relaxed mb-6 italic">
+                                Honours student specialising in Enterprise Software and AI. Awarded High Distinction for Capstone Project 'NLP in Auslan'. Consistently achieved distinction-grade results across core subjects.
                             </p>
 
                             <h4 className="text-sm font-semibold text-white mb-3 uppercase tracking-wider">

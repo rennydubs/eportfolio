@@ -10,10 +10,11 @@ type ProjectProps = (typeof projectsData)[number];
 
 export default function Project({
   title,
-  description,
-  tags,
+  hook,
+  bullets,
+  proofLinks,
+  tech,
   imageUrl,
-  websiteUrl,
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -23,7 +24,7 @@ export default function Project({
   const scaleProgess = useTransform(scrollYProgress, [0, 1], [0.8, 1]);
   const opacityProgess = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
 
-  // Spotlight effect - using useMotionValue for 60fps performance
+  // Spotlight effect
   const mouseX = useMotionValue(0);
   const mouseY = useMotionValue(0);
 
@@ -33,7 +34,6 @@ export default function Project({
     mouseY.set(e.clientY - rect.top);
   };
 
-  // Create the spotlight gradient template
   const spotlightBackground = useMotionTemplate`
     radial-gradient(
       600px circle at ${mouseX}px ${mouseY}px,
@@ -41,6 +41,9 @@ export default function Project({
       transparent 40%
     )
   `;
+
+  // Get primary link for title
+  const primaryLink = proofLinks.live || proofLinks.github || proofLinks.caseStudy;
 
   return (
     <motion.div
@@ -53,7 +56,7 @@ export default function Project({
     >
       <motion.section
         onMouseMove={handleMouseMove}
-        className="relative max-w-[42rem] border border-white/10 rounded-xl overflow-hidden sm:pr-8 sm:min-h-[20rem] transition-all duration-300 sm:group-even:pl-8 bg-white/5 backdrop-blur-md"
+        className="relative max-w-[42rem] border border-white/20 shadow-2xl rounded-xl overflow-hidden sm:pr-8 sm:min-h-[20rem] transition-all duration-300 sm:group-even:pl-8 bg-slate-950/60 backdrop-blur-xl"
         whileHover={{ scale: 1.01 }}
       >
         {/* Spotlight overlay */}
@@ -72,12 +75,12 @@ export default function Project({
           }}
         />
 
-        <div className="relative z-10 pt-4 pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
+        <div className="relative z-10 pt-4 pb-5 px-5 sm:pl-10 sm:pr-2 sm:pt-8 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
 
-          {/* TITLE: Clickable if URL exists */}
+          {/* Title */}
           <h3 className="text-2xl font-semibold text-white">
-            {websiteUrl ? (
-              <Link href={websiteUrl} target="_blank" className="hover:underline hover:text-indigo-300 transition-colors">
+            {primaryLink ? (
+              <Link href={primaryLink} target="_blank" className="hover:underline hover:text-indigo-300 transition-colors">
                 {title}
               </Link>
             ) : (
@@ -85,27 +88,64 @@ export default function Project({
             )}
           </h3>
 
-          <p className="mt-2 leading-relaxed text-white/70">
-            {description}
+          {/* Hook line */}
+          <p className="mt-1.5 text-sm text-white/70 italic">
+            {hook}
           </p>
-          <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
-            {tags.map((tag, index) => (
-              <li
-                className="bg-white/10 backdrop-blur-sm px-3 py-1 text-[0.7rem] uppercase tracking-wider text-white/80 rounded-full border border-white/5"
-                key={index}
-              >
-                {tag}
+
+          {/* Problem / Solution / Result bullets */}
+          <ul className="mt-3 space-y-1.5 text-[0.875rem] text-slate-100">
+            {bullets.map((bullet, i) => (
+              <li key={i} className="flex gap-2">
+                <span className="font-semibold text-white/90 shrink-0">{bullet.label}:</span>
+                <span>{bullet.text}</span>
               </li>
             ))}
           </ul>
+
+          {/* Proof links row */}
+          <div className="flex gap-3 mt-4 text-xs">
+            {proofLinks.live && (
+              <Link href={proofLinks.live} target="_blank" className="px-2.5 py-1 bg-indigo-500/20 border border-indigo-400/30 text-indigo-300 rounded-md hover:bg-indigo-500/30 transition">
+                Live ↗
+              </Link>
+            )}
+            {proofLinks.github && (
+              <Link href={proofLinks.github} target="_blank" className="px-2.5 py-1 bg-white/10 border border-white/10 text-white/80 rounded-md hover:bg-white/20 transition">
+                GitHub ↗
+              </Link>
+            )}
+            {proofLinks.caseStudy && (
+              <Link href={proofLinks.caseStudy} target="_blank" className="px-2.5 py-1 bg-white/10 border border-white/10 text-white/80 rounded-md hover:bg-white/20 transition">
+                Case Study ↗
+              </Link>
+            )}
+          </div>
+
+          {/* Tech chips (max 4 visible) */}
+          <div className="flex flex-wrap gap-2 mt-4">
+            {tech.slice(0, 4).map((t, i) => (
+              <span
+                key={i}
+                className="bg-white/10 backdrop-blur-sm px-2.5 py-1 text-[0.7rem] uppercase tracking-wider text-white/80 rounded-full border border-white/5"
+              >
+                {t}
+              </span>
+            ))}
+            {tech.length > 4 && (
+              <span className="px-2.5 py-1 text-[0.7rem] text-white/50">
+                +{tech.length - 4}
+              </span>
+            )}
+          </div>
         </div>
 
-        {/* IMAGE: Clickable if URL exists */}
-        {websiteUrl ? (
-          <Link href={websiteUrl} target="_blank">
+        {/* Image */}
+        {primaryLink ? (
+          <Link href={primaryLink} target="_blank">
             <Image
               src={imageUrl}
-              alt="Project I worked on"
+              alt={title}
               quality={95}
               className="absolute hidden sm:block top-8 -right-40 
               w-[28.25rem] rounded-t-lg shadow-2xl
@@ -129,7 +169,7 @@ export default function Project({
         ) : (
           <Image
             src={imageUrl}
-            alt="Project I worked on"
+            alt={title}
             quality={95}
             className="absolute hidden sm:block top-8 -right-40 
             w-[28.25rem] rounded-t-lg shadow-2xl
