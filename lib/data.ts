@@ -84,7 +84,9 @@ export const projectsData = [
       { label: "Result", text: "End-to-end capstone system with reproducible evaluation and demo." },
     ],
     proofLinks: {
+      live: null as string | null,
       github: "https://github.com/rennydubs/auslan-nlp-sign-retrieval",
+      caseStudy: null as string | null,
     },
     tech: ["Python", "DistilBERT", "NLP", "Flask"],
     imageUrl: project2Img,
@@ -99,6 +101,8 @@ export const projectsData = [
     ],
     proofLinks: {
       live: "https://juristechne.com",
+      github: null as string | null,
+      caseStudy: null as string | null,
     },
     tech: ["WordPress", "PHP", "JavaScript", "Chart.js"],
     imageUrl: project1Img,
@@ -112,12 +116,14 @@ export const projectsData = [
       { label: "Result", text: "Working prototype with core tracking and gamification loop." },
     ],
     proofLinks: {
+      live: null as string | null,
       github: "https://github.com/rennydubs/carbcasters",
+      caseStudy: null as string | null,
     },
     tech: ["React", "Node.js", "PostgreSQL", "Tailwind"],
     imageUrl: project3Img,
   },
-] as const;
+];
 
 export const skillsData = [
   {
