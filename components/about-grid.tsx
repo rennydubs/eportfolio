@@ -98,10 +98,13 @@ export default function AboutGrid() {
                                 </h3>
                             </div>
                             <p className="text-sm text-slate-100 font-medium mb-2">
-                                Expected Graduation: Feb 2026
+                                All coursework complete. Graduating May 2026
                             </p>
-                            <p className="text-sm text-slate-100 leading-relaxed mb-6 italic">
+                            <p className="text-sm text-slate-100 leading-relaxed mb-4 italic">
                                 Honours student specialising in Enterprise Software and AI. Awarded High Distinction for Capstone Project 'NLP in Auslan'. Consistently achieved distinction-grade results across core subjects.
+                            </p>
+                            <p className="text-sm text-emerald-400 font-medium mb-6">
+                                Currently seeking graduate software engineering roles.
                             </p>
 
                             <h4 className="text-sm font-semibold text-white mb-3 uppercase tracking-wider">

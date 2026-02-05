@@ -10,6 +10,7 @@ type ProjectProps = (typeof projectsData)[number];
 
 export default function Project({
   title,
+  label,
   hook,
   bullets,
   proofLinks,
@@ -76,6 +77,13 @@ export default function Project({
         />
 
         <div className="relative z-10 pt-4 pb-5 px-5 sm:pl-10 sm:pr-2 sm:pt-8 sm:max-w-[50%] flex flex-col h-full sm:group-even:ml-[18rem]">
+
+          {/* Label */}
+          {label && (
+            <span className="inline-block w-fit mb-2 px-2.5 py-1 text-[0.65rem] uppercase tracking-wider font-semibold text-amber-300 bg-amber-500/10 border border-amber-500/20 rounded-full">
+              {label}
+            </span>
+          )}
 
           {/* Title */}
           <h3 className="text-2xl font-semibold text-white">

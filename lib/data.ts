@@ -43,14 +43,14 @@ export const links = [
 
 export const experiencesData = [
   {
-    title: "Software Engineer",
+    title: "Software Engineer Intern",
     company: "Optik Consultancy",
     location: "Sydney, AU",
     start: "Nov 2024",
-    end: "Present",
-    isCurrent: true,
+    end: "Feb 2025",
+    isCurrent: false,
     highlights: [
-      "Led a cross-functional team of 4 to deliver 'InnerSystems', an AI-driven team cohesion and feedback platform.",
+      "Building InnerSystems, an AI-driven team cohesion platform, as a software engineering intern working with a team of 4 engineers for a client seeking Series A funding.",
       "Built and shipped a full-stack MVP using Next.js, Supabase, and FastAPI, including real-time analytics and automated coaching flows.",
       "Designed API and database schema for sensitive team health data, focusing on secure access patterns and maintainable scaling.",
     ],
@@ -77,6 +77,7 @@ export const experiencesData = [
 export const projectsData = [
   {
     title: "Emotion-to-Video AI",
+    label: "Honours Capstone - High Distinction",
     hook: "Built an NLP pipeline that maps emotion in text to video outputs using DistilBERT.",
     bullets: [
       { label: "Problem", text: "Convert emotional tone into visual output for accessibility." },
@@ -93,6 +94,7 @@ export const projectsData = [
   },
   {
     title: "JurisTechne",
+    label: "UTS Startup Design Project",
     hook: "End-to-end UI and design system for an AI legal research startup.",
     bullets: [
       { label: "Problem", text: "Dense legal content and AI outputs were hard to scan and inconsistent." },
@@ -109,6 +111,7 @@ export const projectsData = [
   },
   {
     title: "Carbcasters",
+    label: "Group Course Project",
     hook: "Gamified fitness tracker with meal planning and RPG-style progress.",
     bullets: [
       { label: "Problem", text: "Make fitness adherence engaging and measurable." },

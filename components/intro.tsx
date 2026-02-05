@@ -50,13 +50,12 @@ export default function Intro() {
       >
         <span className="font-bold">Hello, I'm Oliver.</span> A{" "}
         <span className="font-bold">Software Engineer</span> graduating from{" "}
-        <span className="font-bold">UTS</span>. I design and build scalable{" "}
-        <span className="italic text-indigo-300">AI-driven platforms</span> and production-grade{" "}
-        <span className="font-bold">software solutions</span>.
+        <span className="font-bold">UTS</span>. Building the next generation of{" "}
+        <span className="italic text-indigo-300">AI-driven software</span>.
       </motion.h1>
 
       <motion.div
-        className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 text-lg font-medium"
+        className="flex flex-col sm:flex-row items-center justify-center gap-3 px-4 text-sm font-medium"
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{
@@ -65,41 +64,51 @@ export default function Intro() {
       >
         <Link
           href="#contact"
-          className="group relative px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-100 transition-all duration-300 overflow-hidden bg-slate-950 text-white border border-slate-800 hover:border-indigo-500/50 hover:shadow-[0_0_20px_-5px_rgba(99,102,241,0.5)]"
+          className="group px-5 py-2.5 flex items-center gap-2 rounded-lg outline-none transition-all duration-200 bg-white/5 text-white/90 border border-white/10 hover:bg-white/10 hover:border-white/20"
           onClick={() => {
             setActiveSection("Contact");
             setTimeOfLastClick(Date.now());
           }}
         >
-          <span className="absolute inset-0 bg-gradient-to-r from-transparent via-indigo-500/20 to-transparent bg-[length:200%_100%] animate-shimmer" />
-          <span className="relative z-10">Contact me here</span>
-          <BsArrowRight className="relative z-10 opacity-70 group-hover:translate-x-1 transition" />
+          Contact me
+          <BsArrowRight className="text-xs opacity-60 group-hover:translate-x-0.5 transition" />
         </Link>
 
         <a
-          className="group relative px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-100 transition-all duration-300 overflow-hidden bg-slate-950 text-white border border-slate-800 hover:border-purple-500/50 hover:shadow-[0_0_20px_-5px_rgba(168,85,247,0.5)]"
-          href="/CV.pdf"
-          download
+          className="group px-5 py-2.5 flex items-center gap-2 rounded-lg outline-none transition-all duration-200 bg-white/5 text-white/90 border border-white/10 hover:bg-white/10 hover:border-white/20"
+          href="/OliverDuboisResume.pdf"
+          download="OliverDuboisResume.pdf"
         >
-          <span className="absolute inset-0 bg-gradient-to-r from-transparent via-purple-500/20 to-transparent bg-[length:200%_100%] animate-shimmer" />
-          <span className="relative z-10">Download my Resume</span>
-          <HiDownload className="relative z-10 opacity-60 group-hover:translate-y-1 transition" />
+          Download Resume
+          <HiDownload className="text-xs opacity-60 group-hover:translate-y-0.5 transition" />
         </a>
 
+        <Link
+          href="#projects"
+          className="group px-5 py-2.5 flex items-center gap-2 rounded-lg outline-none transition-all duration-200 bg-white/5 text-white/90 border border-white/10 hover:bg-white/10 hover:border-white/20"
+          onClick={() => {
+            setActiveSection("Projects");
+            setTimeOfLastClick(Date.now());
+          }}
+        >
+          View Projects
+          <BsArrowRight className="text-xs opacity-60 group-hover:translate-x-0.5 transition" />
+        </Link>
+
         <a
-          className="bg-white p-4 text-gray-700 hover:text-gray-950 flex items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="p-2.5 flex items-center rounded-lg transition-all duration-200 bg-white/5 text-white/60 border border-white/10 hover:bg-white/10 hover:border-white/20 hover:text-white/90"
           href="https://www.linkedin.com/in/oliver-dubois/"
           target="_blank"
         >
-          <BsLinkedin />
+          <BsLinkedin className="text-base" />
         </a>
 
         <a
-          className="bg-white p-4 text-gray-700 flex items-center gap-2 text-[1.35rem] rounded-full focus:scale-[1.15] hover:scale-[1.15] hover:text-gray-950 active:scale-105 transition cursor-pointer borderBlack dark:bg-white/10 dark:text-white/60"
+          className="p-2.5 flex items-center rounded-lg transition-all duration-200 bg-white/5 text-white/60 border border-white/10 hover:bg-white/10 hover:border-white/20 hover:text-white/90"
           href="https://github.com/rennydubs"
           target="_blank"
         >
-          <FaGithubSquare />
+          <FaGithubSquare className="text-base" />
         </a>
       </motion.div>
     </section>
