@@ -54,7 +54,7 @@ export const experiencesData = [
       "Built and shipped a full-stack MVP using React, Supabase, and FastAPI, including real-time analytics and automated coaching flows.",
       "Designed API and database schema for sensitive team health data, focusing on secure access patterns and maintainable scaling.",
     ],
-    tech: ["Next.js", "Supabase", "FastAPI", "Python"],
+    tech: ["React", "Supabase", "FastAPI", "Python"],
     icon: React.createElement(FaReact),
   },
   {
