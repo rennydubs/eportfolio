@@ -46,8 +46,8 @@ export const experiencesData = [
     title: "Software Engineer Intern",
     company: "Optik Consultancy",
     location: "Sydney, AU",
-    start: "Nov 2024",
-    end: "Feb 2025",
+    start: "Nov 2025",
+    end: "Feb 2026",
     isCurrent: false,
     highlights: [
       "Building InnerSystems, an AI-driven team cohesion platform, as a software engineering intern working with a team of 4 engineers for a client seeking Series A funding.",
