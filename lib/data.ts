@@ -51,7 +51,7 @@ export const experiencesData = [
     isCurrent: false,
     highlights: [
       "Building InnerSystems, an AI-driven team cohesion platform, as a software engineering intern working with a team of 4 engineers for a client seeking Series A funding.",
-      "Built and shipped a full-stack MVP using Next.js, Supabase, and FastAPI, including real-time analytics and automated coaching flows.",
+      "Built and shipped a full-stack MVP using React, Supabase, and FastAPI, including real-time analytics and automated coaching flows.",
       "Designed API and database schema for sensitive team health data, focusing on secure access patterns and maintainable scaling.",
     ],
     tech: ["Next.js", "Supabase", "FastAPI", "Python"],
