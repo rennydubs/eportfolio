@@ -39,7 +39,7 @@ export default function AboutGrid() {
                                 About Me
                             </h2>
                             <p className="text-slate-100 leading-relaxed mb-3">
-                                I am currently completing my{" "}
+                                I recently graduated from my{" "}
                                 <span className="font-semibold text-white">
                                     Bachelor of Engineering (Honours)
                                 </span>{" "}
@@ -98,7 +98,7 @@ export default function AboutGrid() {
                                 </h3>
                             </div>
                             <p className="text-sm text-slate-100 font-medium mb-2">
-                                All coursework complete. Graduating May 2026
+                                Graduated February 2026
                             </p>
                             <p className="text-sm text-slate-100 leading-relaxed mb-4 italic">
                                 Honours student specialising in Enterprise Software and AI. Awarded High Distinction for Capstone Project 'NLP in Auslan'. Consistently achieved distinction-grade results across core subjects.
