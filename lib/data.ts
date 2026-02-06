@@ -50,11 +50,13 @@ export const experiencesData = [
     end: "Feb 2026",
     isCurrent: false,
     highlights: [
-      "Building InnerSystems, an AI-driven team cohesion platform, as a software engineering intern working with a team of 4 engineers for a client seeking Series A funding.",
-      "Built and shipped a full-stack MVP using React, Supabase, and FastAPI, including real-time analytics and automated coaching flows.",
-      "Designed API and database schema for sensitive team health data, focusing on secure access patterns and maintainable scaling.",
+      "Built InnerSystems.ai, an AI-powered team health platform MVP for a Series A-stage client, leading a team of 4 engineers",
+      "Developed full-stack features using React (TypeScript), Python (FastAPI), and Supabase with real-time analytics and automated coaching workflows",
+      "Designed secure API endpoints and PostgreSQL database schemas for sensitive team performance data, implementing role-based access controls",
+      "Integrated Llama-70b and BERT models for generating personalised team insights and AI-driven coaching recommendations",
+      "Collaborated with client stakeholders on feature requirements and delivered iterative releases aligned with funding milestones",
     ],
-    tech: ["React", "Supabase", "FastAPI", "Python"],
+    tech: ["React", "TypeScript", "Supabase", "FastAPI", "Python", "PostgreSQL", "AI/ML"],
     icon: React.createElement(FaReact),
   },
   {
