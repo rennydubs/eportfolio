@@ -51,7 +51,7 @@ export default function AboutGrid() {
                                 <span className="font-semibold text-white">
                                     InnerSystems
                                 </span>
-                                , an AI platform for tracking team health, using React, Python, and
+                                , a platform blending AI and human behavior, using React, Python, and
                                 Supabase. My background in operations at{" "}
                                 <span className="font-semibold text-white">
                                     Bunnings
@@ -101,7 +101,7 @@ export default function AboutGrid() {
                                 Graduated February 2026
                             </p>
                             <p className="text-sm text-slate-100 leading-relaxed mb-4 italic">
-                                Honours student specialising in Enterprise Software and AI. Awarded High Distinction for Capstone Project 'NLP in Auslan'. Consistently achieved distinction-grade results across core subjects.
+                                Honours student specialising in Enterprise Software and AI. Awarded High Distinction for Capstone Project 'NLP in Auslan'.
                             </p>
                             <p className="text-sm text-emerald-400 font-medium mb-6">
                                 Currently seeking graduate software engineering roles.

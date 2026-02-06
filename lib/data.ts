@@ -76,13 +76,13 @@ export const experiencesData = [
 
 export const projectsData = [
   {
-    title: "Emotion-to-Video AI",
+    title: "Auslan Sign Language Retrieval System",
     label: "Honours Capstone - High Distinction",
-    hook: "Built an NLP pipeline that maps emotion in text to video outputs using DistilBERT.",
+    hook: "NLP-powered web app that translates English text to Australian Sign Language videos.",
     bullets: [
-      { label: "Problem", text: "Convert emotional tone into visual output for accessibility." },
-      { label: "Solution", text: "DistilBERT classifier + Flask API + video generation pipeline." },
-      { label: "Result", text: "End-to-end capstone system with reproducible evaluation and demo." },
+      { label: "Problem", text: "Limited digital accessibility tools for deaf community to learn/reference Auslan signs from text." },
+      { label: "Solution", text: "Multi-strategy matching engine (exact, synonym, DistilBERT semantic) with Flask API and 40+ sign vocabulary." },
+      { label: "Result", text: "Working retrieval system achieving 96% precision on fitness coaching domain with web demo." },
     ],
     proofLinks: {
       live: null as string | null,
@@ -91,23 +91,6 @@ export const projectsData = [
     },
     tech: ["Python", "DistilBERT", "NLP", "Flask"],
     imageUrl: project2Img,
-  },
-  {
-    title: "JurisTechne",
-    label: "UTS Startup Design Project",
-    hook: "End-to-end UI and design system for an AI legal research startup.",
-    bullets: [
-      { label: "Problem", text: "Dense legal content and AI outputs were hard to scan and inconsistent." },
-      { label: "Solution", text: "Built a scalable design system and high-fidelity prototypes with clear data-visualisation layouts." },
-      { label: "Result", text: "Delivered a cohesive product UI that improved readability and accelerated iteration." },
-    ],
-    proofLinks: {
-      live: "https://juristechne.com",
-      github: null as string | null,
-      caseStudy: null as string | null,
-    },
-    tech: ["WordPress", "PHP", "JavaScript", "Chart.js"],
-    imageUrl: project1Img,
   },
   {
     title: "Carbcasters",
@@ -125,6 +108,23 @@ export const projectsData = [
     },
     tech: ["React", "Node.js", "PostgreSQL", "Tailwind"],
     imageUrl: project3Img,
+  },
+  {
+    title: "JurisTechne",
+    label: "UTS Startup Design Project",
+    hook: "End-to-end UI and design system for an AI legal research startup.",
+    bullets: [
+      { label: "Problem", text: "Dense legal content and AI outputs were hard to scan and inconsistent." },
+      { label: "Solution", text: "Built a scalable design system and high-fidelity prototypes with clear data-visualisation layouts." },
+      { label: "Result", text: "Delivered a cohesive product UI that improved readability and accelerated iteration." },
+    ],
+    proofLinks: {
+      live: "https://juristechne.com",
+      github: null as string | null,
+      caseStudy: null as string | null,
+    },
+    tech: ["WordPress"],
+    imageUrl: project1Img,
   },
 ];
 
